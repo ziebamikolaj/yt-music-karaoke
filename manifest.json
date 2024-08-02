@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Music Karaoke",
+  "version": "1.0",
+  "description": "Adds karaoke feature to YouTube Music",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://music.youtube.com/*", "API_URL/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://music.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon16.png",
+      "48": "/images/icon48.png",
+      "128": "/images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon16.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  }
+}

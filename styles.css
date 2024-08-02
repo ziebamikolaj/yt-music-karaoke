@@ -1,0 +1,61 @@
+#karaoke-lyrics {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: x-large;
+  text-align: center;
+  z-index: 9999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#karaoke-lyrics::-webkit-scrollbar {
+  width: 6px;
+}
+
+#karaoke-lyrics::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#karaoke-lyrics::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.lyric-line {
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.lyric-line:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.lyric-line.active {
+  color: #ffffff;
+  font-weight: 600;
+  opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+}
+
+.lyric-line.active {
+  animation: glow 2s ease-in-out infinite;
+}
