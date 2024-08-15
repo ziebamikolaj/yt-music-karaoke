@@ -21,7 +21,7 @@ Enhance your YouTube Music experience with real-time karaoke lyrics! This Chrome
 
 ## Usage
 
-1. Navigate to YouTube Music (<https://music.youtu\be.com>).
+1. Navigate to YouTube Music (<https://music.youtube.com>).
 2. Play any song.
 3. The karaoke lyrics will automatically appear over the album art.
 4. Use the extension popup to adjust font size and toggle auto-scroll.
